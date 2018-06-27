@@ -12,7 +12,8 @@ public:
 Sequence(string);
 int length();
 int numberOf(char);
-int CountLines(const char*);
+int consecutive(char);
+//int CountLines(const char*);
 string longestConsecutive();
 string longestRepeated();
 private:
