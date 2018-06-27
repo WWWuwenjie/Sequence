@@ -90,6 +90,7 @@ return longest;
 
 string Sequence::longestRepeated()
 {
+//need about 1.5h
 size_t maxleng=1;
 string longest;
 int begin=0;
@@ -117,8 +118,6 @@ while(begin<sequence.length())
      longest.erase(longest.end());
    }
   begin++; 
-  if(begin%1000==0)
-    cout<<begin<<endl;
  } 
 return longest;
 }

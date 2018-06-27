@@ -18,8 +18,6 @@ string longestConsecutive();
 string longestRepeated();
 private:
 string sequence;
-string longcon;
-string longre;
 };
 
 #endif
