@@ -94,30 +94,32 @@ string Sequence::longestRepeated()
 size_t maxleng=1;
 string longest;
 int begin=0;
-while(begin<sequence.length())
+while(begin+maxleng-1<sequence.length())
  {
-  size_t strleng=1;
-  int end=begin+strleng-1;
-  string str(sequence,begin,strleng);
+  bool f=0;
+  int end=begin+maxleng-1;
+  string str(sequence,begin,maxleng);
   size_t found=sequence.find(str,end+1);
   while(found!=string::npos)
    {
+     f=1;
      end++;
-     strleng++;
+     maxleng++;
      char ch=sequence[end];
      char s1[2]={ch,0};
      string s=s1;
      str.append(s);
-     found=sequence.find(str,end+1);
+     found=sequence.find(str,end); 
    }
    
-  if(strleng>maxleng)
+  if(f)
    {
-     maxleng=strleng;
      longest=str;
-     longest.erase(longest.end());
+     longest.erase(longest.end()-1);
    }
   begin++; 
+  if(begin%1000==0)
+    cout<<begin<<endl;
  } 
 return longest;
 }
