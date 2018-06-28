@@ -118,8 +118,8 @@ while(begin+maxleng-1<sequence.length())
      longest.erase(longest.end()-1);
    }
   begin++; 
-  if(begin%1000==0)
-    cout<<begin<<endl;
+ /* if(begin%1000==0)
+    cout<<begin<<endl;*/
  } 
 return longest;
 }
